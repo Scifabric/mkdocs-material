@@ -12,14 +12,59 @@ To determine the currently installed version, use the following command:
 
 ``` sh
 pip show mkdocs-material | grep -E ^Version
-# Version 1.10.1
+# Version 1.12.1
 ```
 
 ## Changelog
 
+### 1.12.1 <small>_ October 22, 2017</small>
+
+* Added Polish, Swedish and Spanish translations
+* Improved downward compatibility with custom partials
+* Temporarily pinned MkDocs version within Docker image to 0.16.3
+* Fixed [#519][519]: Missing theme configuration file
+
+  [519]: https://github.com/squidfunk/mkdocs-material/issues/519
+
+### 1.12.0 <small>_ October 20, 2017</small>
+
+* Added support for setting language(s) via `mkdocs.yml`
+* Added support for default localization
+* Added German and Danish translations
+* Fixed [#374][374]: Search bar misalignment on big screens
+
+  [374]: https://github.com/squidfunk/mkdocs-material/issues/374
+
+### 1.11.0 <small>_ October 19, 2017</small>
+
+* Added localization to clipboard
+* Refactored localization logic
+
+### 1.10.4 <small>_ October 18, 2017</small>
+
+* Improved print styles of code blocks
+* Improved search UX (don't close on enter if no selection)
+* Fixed [#495][495]: Vertical scrollbar on short pages
+
+  [495]: https://github.com/squidfunk/mkdocs-material/issues/495
+
+### 1.10.3 <small>_ October 11, 2017</small>
+
+* Fixed [#484][484]: Vertical scrollbar on some MathJax formulas
+* Fixed [#483][483]: Footnote backref target offset regression
+
+  [483]: https://github.com/squidfunk/mkdocs-material/issues/483
+  [484]: https://github.com/squidfunk/mkdocs-material/issues/484
+
+### 1.10.2 <small>_ October 6, 2017</small>
+
+* Fixed [#468][468]: Sidebar shows scrollbar if content is shorter (in Safari)
+
+  [468]: https://github.com/squidfunk/mkdocs-material/issues/468
+
 ### 1.10.1 <small>_ September 14, 2017</small>
 
-* Fixed [#455][455]: bold code blocks rendered with normal font weight
+* Fixed [#455][455]: Bold code blocks rendered with normal font weight
 
   [455]: https://github.com/squidfunk/mkdocs-material/issues/455
 

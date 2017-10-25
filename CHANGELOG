@@ -1,6 +1,40 @@
+mkdocs-material-1.12.1 (2017-10-22)
+
+  * Added Polish, Swedish and Spanish translations
+  * Improved downward compatibility with custom partials
+  * Temporarily pinned MkDocs version within Docker image to 0.16.3
+  * Fixed #519: Missing theme configuration file
+
+mkdocs-material-1.12.0 (2017-10-20)
+
+  * Added support for setting language(s) via mkdocs.yml
+  * Added support for default localization
+  * Added German and Danish translations
+  * Fixed #374: Search bar misalignment on big screens
+
+mkdocs-material-1.11.0 (2017-10-19)
+
+  * Added localization to clipboard
+  * Refactored localization logic
+
+mkdocs-material-1.10.4 (2017-10-18)
+
+  * Improved print styles of code blocks
+  * Improved search UX (don't close on enter if no selection)
+  * Fixed #495: Vertical scrollbar on short pages
+
+mkdocs-material-1.10.3 (2017-10-11)
+
+  * Fixed #484: Vertical scrollbar on some MathJax formulas
+  * Fixed #483: Footnote backref target offset regression
+
+mkdocs-material-1.10.2 (2017-10-06)
+
+  * Fixed #468: Sidebar shows scrollbar if content is shorter (in Safari)
+
 mkdocs-material-1.10.1 (2017-09-14)
 
-  * Fixed #455: bold code blocks rendered with normal font weight
+  * Fixed #455: Bold code blocks rendered with normal font weight
 
 mkdocs-material-1.10.0 (2017-09-01)
 

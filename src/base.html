@@ -20,7 +20,7 @@
   IN THE SOFTWARE.
 -->
 
-{% import "partials/language.html" as lang %}
+{% import "partials/language.html" as lang with context %}
 
 <!DOCTYPE html>
 <html lang="{{ lang.t('language') }}" class="no-js">
@@ -53,6 +53,19 @@
       {% elif config.site_author %}
         <meta name="author" content="{{ config.site_author }}" />
       {% endif %}
+
+      <!-- Localization -->
+      {% for key in [
+        "clipboard.copy",
+        "clipboard.copied",
+        "search.languages",
+        "search.result.none",
+        "search.result.one",
+        "search.result.other",
+        "search.tokenizer"
+      ] %}
+        <meta name="lang:{{ key }}" content="{{ lang.t(key) }}" />
+      {% endfor %}
 
       <!-- Favicon -->
       {% if config.site_favicon %}
@@ -181,6 +194,13 @@
     <!-- Container, necessary for web-application context -->
     <div class="md-container">
       {% set feature = config.extra.get("feature", {}) %}
+
+      <!-- Hero banner -->
+      {% if feature.hero %}
+        {% include "partials/hero.html" %}
+      {% endif %}
+
+      <!-- Tabs with outline -->
       {% if feature.tabs %}
         {% include "partials/tabs.html" %}
       {% endif %}
@@ -300,7 +320,12 @@
 
       <!-- Initialize application -->
       <script>
-        app.initialize({ url: { base: "{{ base_url }}" } });
+        app.initialize({
+          version: "{{ mkdocs_version }}",
+          url: {
+            base: "{{ base_url }}"
+          }
+        });
       </script>
       {% for path in extra_javascript %}
         <script src="{{ path }}"></script>
