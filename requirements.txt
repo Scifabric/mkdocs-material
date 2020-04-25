@@ -19,5 +19,5 @@
 # IN THE SOFTWARE.
 
 mkdocs==0.16.3
-Pygments>=2.2
-pymdown-extensions>=3.4
+Pygments==2.2
+pymdown-extensions==3.4
